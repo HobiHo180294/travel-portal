@@ -1,0 +1,111 @@
+/* each loop */
+
+// Functions
+@import "../modules/functions";
+
+// Styles for buttons
+$btnList: "loginBtn", "standardBtn", "moreBtn";
+
+@each $btnName in $btnList {
+  .#{$btnName} {
+    display: inline-block;
+
+    @if $btnName == "standardBtn" or $btnName == "moreBtn" {
+      padding-top: 13.5px;
+      padding-bottom: 13.5px;
+
+      @if $btnName == "standardBtn" {
+        padding-right: 32.5px;
+        padding-left: 32.5px;
+
+        @media screen and (max-width: 610px) {
+          padding-right: 28px;
+          padding-left: 28px;
+        }
+
+        @media screen and (max-width: 390px) {
+          padding-right: 9px;
+          padding-left: 9px;
+        }
+      } @else if $btnName == "moreBtn" {
+        position: relative;
+        padding-right: 34px;
+        padding-left: 85px;
+
+        &::before {
+          content: url("../assets/img/icons/arrow-right-ico.svg");
+          position: absolute;
+          top: 50%;
+          left: 36px;
+          display: inline-block;
+          width: 35px;
+          height: 22.5px;
+          transform: translateY(-50%);
+        }
+
+        @media screen and (max-width: 610px) {
+          padding-right: 30px;
+          padding-left: 70px;
+
+          &::before {
+            left: 25px;
+          }
+        }
+
+        @media screen and (max-width: 390px) {
+          padding-right: 12px;
+          padding-left: 28px;
+
+          &::before {
+            content: url("../assets/img/icons/more-button-media-arrow.svg");
+            left: 12px;
+            width: 10px;
+            height: 16px;
+          }
+        }
+      }
+
+      font-size: 24px;
+      line-height: percentlh(32, 24);
+
+      @media screen and (max-width: 1100px) {
+        font-size: 20px;
+        line-height: percentlh(28, 20);
+      }
+
+      @media screen and (max-width: 610px) {
+        font-size: 18px;
+        line-height: percentlh(26, 18);
+      }
+
+      @media screen and (max-width: 390px) {
+        padding-top: 7.5px;
+        padding-bottom: 7.5px;
+        font-size: 11px;
+        line-height: percentlh(15, 11);
+      }
+    } @else {
+      padding: 10px 30px;
+      font-size: 16px;
+      line-height: percentlh(21, 16);
+    }
+
+    font-family: "Red Hat Text";
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #0d606f;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+      0px 2px 3px rgba(13, 96, 111, 0.16);
+
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      transform: scale(0.95);
+      background-color: rgb(10, 78, 90);
+    }
+  }
+}

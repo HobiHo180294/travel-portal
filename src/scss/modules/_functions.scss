@@ -1,0 +1,5 @@
+@function percentlh($lh, $text-size) {
+  $result: calc(#{$lh} / #{$text-size} * 100%);
+
+  @return $result;
+}

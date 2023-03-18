@@ -1,0 +1,60 @@
+{
+  "name": "travel",
+  "version": "1.0.0",
+  "description": "Site for planning and ordering trips",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "start": "cross-env NODE_ENV=development webpack serve --mode development",
+    "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
+    "stats": "webpack --json > stats.json && webpack-bundle-analyzer stats.json"
+  },
+  "browserslist": "> 0.25%, not dead",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HobiHo180294/Logoipsum.git"
+  },
+  "keywords": [
+    "travel",
+    "world",
+    "trip",
+    "holidays",
+    "vacation",
+    "leisure",
+    "recreation"
+  ],
+  "author": "Yehor Potebenko <hitechnic.uu68@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rolling-scopes-school/hobiho180294-JSFEPRESCHOOL2022Q2/issues"
+  },
+  "homepage": "https://github.com/rolling-scopes-school/hobiho180294-JSFEPRESCHOOL2022Q2#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^10.2.4",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^3.4.1",
+    "gh-pages": "^4.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "sass": "^1.59.3",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.72.1",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "caniuse-lite": "^1.0.30001467",
+    "normalize.css": "^8.0.1"
+  }
+}
